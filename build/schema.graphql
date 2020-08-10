@@ -4,6 +4,8 @@ type History @entity {
   totalProposalCount: BigInt!
   "All Proposals"
   allProposals: [Proposal!]!
+  "Total Voters"
+  totalVoterCount: BigInt!
 }
 
 type Proposal @entity {
@@ -70,8 +72,10 @@ type Ballot @entity {
   voter: Voter!
   "Support: True if a yes vote, false if a no vote"
   support: Boolean!
-  "Number of Votes the voter has cast"
-  votesCast: BigInt!
+  # "Number of Votes the voter has cast"
+  # votesCast: BigInt!
+  "Voters Vote Weight"
+  voteWeight: BigInt!
   "Proposal for which this ballot is cast"
   proposal: Proposal!
 }

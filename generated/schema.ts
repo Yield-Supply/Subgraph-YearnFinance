@@ -59,6 +59,15 @@ export class History extends Entity {
   set allProposals(value: Array<string>) {
     this.set("allProposals", Value.fromStringArray(value));
   }
+
+  get totalVoterCount(): BigInt {
+    let value = this.get("totalVoterCount");
+    return value.toBigInt();
+  }
+
+  set totalVoterCount(value: BigInt) {
+    this.set("totalVoterCount", Value.fromBigInt(value));
+  }
 }
 
 export class Proposal extends Entity {
@@ -293,13 +302,13 @@ export class Ballot extends Entity {
     this.set("support", Value.fromBoolean(value));
   }
 
-  get votesCast(): BigInt {
-    let value = this.get("votesCast");
+  get voteWeight(): BigInt {
+    let value = this.get("voteWeight");
     return value.toBigInt();
   }
 
-  set votesCast(value: BigInt) {
-    this.set("votesCast", Value.fromBigInt(value));
+  set voteWeight(value: BigInt) {
+    this.set("voteWeight", Value.fromBigInt(value));
   }
 
   get proposal(): string {

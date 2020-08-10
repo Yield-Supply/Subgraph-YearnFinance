@@ -13,6 +13,12 @@ import {
   Withdrawn
 } from "../generated/Contract/Contract"
 
+export function handleVote(event: Vote): void { 
+
+
+  
+}
+
 import { handleNewProposal, handleCreateProposal } from './handleNewProposal'
 
 export { handleNewProposal, handleCreateProposal }
@@ -31,6 +37,6 @@ export function handleRewardPaid(event: RewardPaid): void { }
 
 export function handleStaked(event: Staked): void { }
 
-export function handleVote(event: Vote): void { }
+
 
 export function handleWithdrawn(event: Withdrawn): void { }

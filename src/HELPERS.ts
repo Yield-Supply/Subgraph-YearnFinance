@@ -11,6 +11,7 @@ export function getHistory(): History {
         history = new History(id)
         history.totalProposalCount = BigInt.fromI32(0)
         history.allProposals = []
+        history.totalVoterCount = BigInt.fromI32(0)
     }
 
     return history as History
@@ -59,6 +60,11 @@ export function getVoter(voterId: string): Voter {
 
     //VoterId should be created by the address using toHexString()
     let voter = Voter.load(voterId)
+
+    //Get History to add Voter
+    let history = getHistory()
+    history.totalVoterCount = history.totalVoterCount.plus(BigInt.fromI32(1))
+    
 
     if (voter == null) {
         voter = new Voter(voterId)
