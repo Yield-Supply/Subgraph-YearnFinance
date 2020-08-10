@@ -15,14 +15,12 @@ import {
 
 import { handleNewProposal, handleCreateProposal } from './handleNewProposal'
 import { handleVote } from './handleVote'
+import { handleProposalFinished } from './handleProposalFinished'
+import { handleRegisterVoter } from './handleRegisterVoter'
 
-export { handleNewProposal, handleCreateProposal, handleVote }
+export { handleNewProposal, handleCreateProposal, handleVote, handleProposalFinished }
 
 export function handleOwnershipTransferred(event: OwnershipTransferred): void { }
-
-export function handleProposalFinished(event: ProposalFinished): void { }
-
-export function handleRegisterVoter(event: RegisterVoter): void { }
 
 export function handleRevokeVoter(event: RevokeVoter): void { }
 
@@ -31,7 +29,5 @@ export function handleRewardAdded(event: RewardAdded): void { }
 export function handleRewardPaid(event: RewardPaid): void { }
 
 export function handleStaked(event: Staked): void { }
-
-
 
 export function handleWithdrawn(event: Withdrawn): void { }

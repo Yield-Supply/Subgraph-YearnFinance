@@ -12,6 +12,7 @@ export function getHistory(): History {
         history.totalProposalCount = BigInt.fromI32(0)
         history.allProposals = []
         history.totalVoterCount = BigInt.fromI32(0)
+        history.totalVotes = BigInt.fromI32(0)
     }
 
     return history as History
@@ -51,6 +52,7 @@ export function getProposal(proposalId: string): Proposal {
         proposal.quorumRequired = BigInt.fromI32(0)
         proposal.totalVotesAvailible = BigInt.fromI32(0)
         proposal.executor = Address.fromString(ADDRESS_ZERO)
+        proposal.quorumReached = false
     }
 
     return proposal as Proposal
@@ -64,7 +66,7 @@ export function getVoter(voterId: string): Voter {
     //Get History to add Voter
     let history = getHistory()
     history.totalVoterCount = history.totalVoterCount.plus(BigInt.fromI32(1))
-    
+
 
     if (voter == null) {
         voter = new Voter(voterId)
@@ -73,7 +75,8 @@ export function getVoter(voterId: string): Voter {
         voter.proposalsProposedCount = BigInt.fromI32(0)
         voter.ballotsCast = []
         voter.proposalsParticipatedCount = BigInt.fromI32(0)
-        voter.save()
+        voter.voteCount = BigInt.fromI32(0)
+        voter.voterRegistered = false
     }
 
     return voter as Voter

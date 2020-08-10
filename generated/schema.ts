@@ -68,6 +68,15 @@ export class History extends Entity {
   set totalVoterCount(value: BigInt) {
     this.set("totalVoterCount", Value.fromBigInt(value));
   }
+
+  get totalVotes(): BigInt {
+    let value = this.get("totalVotes");
+    return value.toBigInt();
+  }
+
+  set totalVotes(value: BigInt) {
+    this.set("totalVotes", Value.fromBigInt(value));
+  }
 }
 
 export class Proposal extends Entity {
@@ -234,6 +243,15 @@ export class Proposal extends Entity {
   set executor(value: Bytes) {
     this.set("executor", Value.fromBytes(value));
   }
+
+  get quorumReached(): boolean {
+    let value = this.get("quorumReached");
+    return value.toBoolean();
+  }
+
+  set quorumReached(value: boolean) {
+    this.set("quorumReached", Value.fromBoolean(value));
+  }
 }
 
 export class Ballot extends Entity {
@@ -385,5 +403,23 @@ export class Voter extends Entity {
 
   set proposalsParticipatedCount(value: BigInt) {
     this.set("proposalsParticipatedCount", Value.fromBigInt(value));
+  }
+
+  get voteCount(): BigInt {
+    let value = this.get("voteCount");
+    return value.toBigInt();
+  }
+
+  set voteCount(value: BigInt) {
+    this.set("voteCount", Value.fromBigInt(value));
+  }
+
+  get voterRegistered(): boolean {
+    let value = this.get("voterRegistered");
+    return value.toBoolean();
+  }
+
+  set voterRegistered(value: boolean) {
+    this.set("voterRegistered", Value.fromBoolean(value));
   }
 }
