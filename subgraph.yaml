@@ -48,4 +48,7 @@ dataSources:
           handler: handleVote
         - event: Withdrawn(indexed address,uint256)
           handler: handleWithdrawn
+      callHandlers:
+        - function: propose(address,string)
+          handler: handleCreateProposal
       file: ./src/mapping.ts

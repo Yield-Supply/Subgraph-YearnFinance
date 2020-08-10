@@ -13,9 +13,9 @@ import {
   Withdrawn
 } from "../generated/Contract/Contract"
 
-import { handleNewProposal } from './handleNewProposal'
+import { handleNewProposal, handleCreateProposal } from './handleNewProposal'
 
-export { handleNewProposal }
+export { handleNewProposal, handleCreateProposal }
 
 export function handleOwnershipTransferred(event: OwnershipTransferred): void { }
 

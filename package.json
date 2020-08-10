@@ -1,13 +1,13 @@
 {
-  "name": "yearn-governance",
+  "name": "yearngovernance",
   "license": "UNLICENSED",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ crazyrabbitltc/yearn-governance",
-    "create-local": "graph create --node http://localhost:8020/ crazyrabbitltc/yearn-governance",
-    "remove-local": "graph remove --node http://localhost:8020/ crazyrabbitltc/yearn-governance",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 crazyrabbitltc/yearn-governance"
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ crazyrabbitltc/yearngovernance",
+    "create-local": "graph create --node http://localhost:8020/ crazyrabbitltc/yearngovernance",
+    "remove-local": "graph remove --node http://localhost:8020/ crazyrabbitltc/yearngovernance",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 crazyrabbitltc/yearngovernance"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.18.0",
