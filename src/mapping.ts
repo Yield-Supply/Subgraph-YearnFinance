@@ -17,12 +17,15 @@ import { handleNewProposal, handleCreateProposal } from './handleNewProposal'
 import { handleVote } from './handleVote'
 import { handleProposalFinished } from './handleProposalFinished'
 import { handleRegisterVoter } from './handleRegisterVoter'
+import { handleRevokeVoter } from './handleRevokeVoter'
 
-export { handleNewProposal, handleCreateProposal, handleVote, handleProposalFinished }
+export {
+  handleNewProposal, handleCreateProposal, handleRevokeVoter,
+  handleRegisterVoter,
+  handleVote, handleProposalFinished
+}
 
 export function handleOwnershipTransferred(event: OwnershipTransferred): void { }
-
-export function handleRevokeVoter(event: RevokeVoter): void { }
 
 export function handleRewardAdded(event: RewardAdded): void { }
 
