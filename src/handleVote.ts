@@ -33,7 +33,7 @@ export function handleVote(event: Vote): void {
     let ballot = new Ballot(event.transaction.hash.toHex())
     //Add Data to Ballot
     ballot.timestamp = event.block.timestamp
-    ballot.blockNumber = event.block.blockNumber
+    ballot.blockNumber = event.block.number
     ballot.voter = voter.id
     ballot.support = support
     ballot.voteWeight = weight

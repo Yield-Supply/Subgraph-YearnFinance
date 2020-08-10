@@ -13,15 +13,10 @@ import {
   Withdrawn
 } from "../generated/Contract/Contract"
 
-export function handleVote(event: Vote): void { 
-
-
-  
-}
-
 import { handleNewProposal, handleCreateProposal } from './handleNewProposal'
+import { handleVote } from './handleVote'
 
-export { handleNewProposal, handleCreateProposal }
+export { handleNewProposal, handleCreateProposal, handleVote }
 
 export function handleOwnershipTransferred(event: OwnershipTransferred): void { }
 
