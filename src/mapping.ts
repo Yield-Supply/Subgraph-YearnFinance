@@ -22,13 +22,15 @@ import { handleStaked } from './handleStaked'
 import { handleWithdrawn } from './handleWithdrawn'
 import { handleRewardPaid } from './handleRewardPaid'
 import { handleRewardAdded } from './handleRewardAdded'
+import {handleOwnershipTransferred} from './handleOwnershipTransferred'
 
 export {
   handleNewProposal, handleCreateProposal, handleRevokeVoter,
-  handleRegisterVoter, handleStaked, handleWithdrawn,
+  handleRegisterVoter, handleStaked, handleWithdrawn,handleOwnershipTransferred,
   handleVote, handleProposalFinished, handleRewardPaid, handleRewardAdded
 }
 
-export function handleOwnershipTransferred(event: OwnershipTransferred): void { }
+
+
 
 

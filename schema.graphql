@@ -18,6 +18,12 @@ type History @entity {
   totalReward: BigInt!
   "Paid Rewards"
   paidRewards: BigInt!
+  "Current Owner"
+  currentOwner: Bytes!
+  "Previous Owner"
+  previousOwner: Bytes!
+  "Ownership Handover"
+  blockOwnershipChange: BigInt!
 }
 
 type Proposal @entity {

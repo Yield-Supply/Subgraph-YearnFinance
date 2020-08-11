@@ -122,6 +122,33 @@ export class History extends Entity {
   set paidRewards(value: BigInt) {
     this.set("paidRewards", Value.fromBigInt(value));
   }
+
+  get currentOwner(): Bytes {
+    let value = this.get("currentOwner");
+    return value.toBytes();
+  }
+
+  set currentOwner(value: Bytes) {
+    this.set("currentOwner", Value.fromBytes(value));
+  }
+
+  get previousOwner(): Bytes {
+    let value = this.get("previousOwner");
+    return value.toBytes();
+  }
+
+  set previousOwner(value: Bytes) {
+    this.set("previousOwner", Value.fromBytes(value));
+  }
+
+  get blockOwnershipChange(): BigInt {
+    let value = this.get("blockOwnershipChange");
+    return value.toBigInt();
+  }
+
+  set blockOwnershipChange(value: BigInt) {
+    this.set("blockOwnershipChange", Value.fromBigInt(value));
+  }
 }
 
 export class Proposal extends Entity {

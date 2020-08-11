@@ -18,6 +18,9 @@ export function getHistory(): History {
         history.totalStakedAmount = BigInt.fromI32(0)
         history.totalReward = BigInt.fromI32(0)
         history.paidRewards = BigInt.fromI32(0)
+        history.currentOwner = Address.fromString(ADDRESS_ZERO)
+        history.previousOwner = Address.fromString(ADDRESS_ZERO)
+        history.blockOwnershipChange = BigInt.fromI32(0)
         history.disclaimer = "Created by Dennison Bertram. No warrenty. Use at your own risk. Verify all information yourself. You have been warned. dennison@dennisonbertram.com."
     }
 
