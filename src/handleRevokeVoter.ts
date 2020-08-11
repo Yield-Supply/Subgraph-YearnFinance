@@ -28,7 +28,7 @@ export function handleRevokeVoter(event: RevokeVoter): void {
     history.totalVoterCount = history.totalVoterCount.minus(BigInt.fromI32(1))
 
     //Update Voter
-    voter.voteCount = voteCount
+    voter.voteCount = BigInt.fromI32(0)
     voter.voterRegistered = false
 
     //Save

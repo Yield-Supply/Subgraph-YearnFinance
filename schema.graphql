@@ -11,6 +11,7 @@ type History @entity {
   "Total number of voters Staked"
   totalStakers: BigInt!
   "Total Amount Staked"
+export function handleStaked(event: Staked): void { }
   totalStakedAmount: BigInt!
 }
 

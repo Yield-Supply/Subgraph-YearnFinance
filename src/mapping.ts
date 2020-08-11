@@ -32,5 +32,4 @@ export function handleRewardAdded(event: RewardAdded): void { }
 
 export function handleRewardPaid(event: RewardPaid): void { }
 
-
 export function handleWithdrawn(event: Withdrawn): void { }
