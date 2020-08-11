@@ -1,5 +1,7 @@
 type History @entity {
   id: ID!
+  "Disclaimer"
+  disclaimer: String!
   "Total Proposal Count"
   totalProposalCount: BigInt!
   "All Proposals"

@@ -42,6 +42,15 @@ export class History extends Entity {
     this.set("id", Value.fromString(value));
   }
 
+  get disclaimer(): string {
+    let value = this.get("disclaimer");
+    return value.toString();
+  }
+
+  set disclaimer(value: string) {
+    this.set("disclaimer", Value.fromString(value));
+  }
+
   get totalProposalCount(): BigInt {
     let value = this.get("totalProposalCount");
     return value.toBigInt();

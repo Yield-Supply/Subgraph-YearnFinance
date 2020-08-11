@@ -1,5 +1,6 @@
 import { BigInt, BigDecimal, log, Address, ByteArray } from "@graphprotocol/graph-ts"
 import { Voter, Proposal, History } from "../generated/schema"
+import { OwnershipTransferred } from "../generated/Contract/Contract"
 
 
 export function getHistory(): History {
@@ -15,6 +16,7 @@ export function getHistory(): History {
         history.totalVotes = BigInt.fromI32(0)
         history.totalStakers = BigInt.fromI32(0)
         history.totalStakedAmount = BigInt.fromI32(0)
+        history.disclaimer = "Created by Dennison Bertram. No warrenty. Use at your own risk. Verify all information yourself. You have been warned. dennison@dennisonbertram.com."
     }
 
     return history as History
