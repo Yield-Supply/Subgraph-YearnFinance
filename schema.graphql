@@ -14,6 +14,10 @@ type History @entity {
   totalStakers: BigInt!
   "Total Amount Staked"
   totalStakedAmount: BigInt!
+  "Total Reward"
+  totalReward: BigInt!
+  "Paid Rewards"
+  paidRewards: BigInt!
 }
 
 type Proposal @entity {
@@ -109,4 +113,6 @@ type Voter @entity {
   staking: Boolean!
   "Staked Amount"
   stakedAmount: BigInt!
+  "Paid Rewards"
+  paidReward: BigInt!
 }

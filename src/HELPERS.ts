@@ -16,6 +16,8 @@ export function getHistory(): History {
         history.totalVotes = BigInt.fromI32(0)
         history.totalStakers = BigInt.fromI32(0)
         history.totalStakedAmount = BigInt.fromI32(0)
+        history.totalReward = BigInt.fromI32(0)
+        history.paidRewards = BigInt.fromI32(0)
         history.disclaimer = "Created by Dennison Bertram. No warrenty. Use at your own risk. Verify all information yourself. You have been warned. dennison@dennisonbertram.com."
     }
 
@@ -83,6 +85,7 @@ export function getVoter(voterId: string): Voter {
         voter.voterRegistered = false
         voter.staking = false
         voter.stakedAmount = BigInt.fromI32(0)
+        voter.paidReward = BigInt.fromI32(0)
     }
 
     return voter as Voter

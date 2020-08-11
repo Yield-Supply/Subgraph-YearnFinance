@@ -19,17 +19,16 @@ import { handleProposalFinished } from './handleProposalFinished'
 import { handleRegisterVoter } from './handleRegisterVoter'
 import { handleRevokeVoter } from './handleRevokeVoter'
 import { handleStaked } from './handleStaked'
-import { handleWithdrawn} from './handleWithdrawn'
+import { handleWithdrawn } from './handleWithdrawn'
+import { handleRewardPaid } from './handleRewardPaid'
+import { handleRewardAdded } from './handleRewardAdded'
 
 export {
   handleNewProposal, handleCreateProposal, handleRevokeVoter,
-  handleRegisterVoter, handleStaked,handleWithdrawn,
-  handleVote, handleProposalFinished
+  handleRegisterVoter, handleStaked, handleWithdrawn,
+  handleVote, handleProposalFinished, handleRewardPaid, handleRewardAdded
 }
 
 export function handleOwnershipTransferred(event: OwnershipTransferred): void { }
 
-export function handleRewardAdded(event: RewardAdded): void { }
-
-export function handleRewardPaid(event: RewardPaid): void { }
 
