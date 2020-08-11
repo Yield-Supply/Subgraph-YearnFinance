@@ -77,6 +77,24 @@ export class History extends Entity {
   set totalVotes(value: BigInt) {
     this.set("totalVotes", Value.fromBigInt(value));
   }
+
+  get totalStakers(): BigInt {
+    let value = this.get("totalStakers");
+    return value.toBigInt();
+  }
+
+  set totalStakers(value: BigInt) {
+    this.set("totalStakers", Value.fromBigInt(value));
+  }
+
+  get totalStakedAmount(): BigInt {
+    let value = this.get("totalStakedAmount");
+    return value.toBigInt();
+  }
+
+  set totalStakedAmount(value: BigInt) {
+    this.set("totalStakedAmount", Value.fromBigInt(value));
+  }
 }
 
 export class Proposal extends Entity {
@@ -421,5 +439,23 @@ export class Voter extends Entity {
 
   set voterRegistered(value: boolean) {
     this.set("voterRegistered", Value.fromBoolean(value));
+  }
+
+  get staking(): boolean {
+    let value = this.get("staking");
+    return value.toBoolean();
+  }
+
+  set staking(value: boolean) {
+    this.set("staking", Value.fromBoolean(value));
+  }
+
+  get stakedAmount(): BigInt {
+    let value = this.get("stakedAmount");
+    return value.toBigInt();
+  }
+
+  set stakedAmount(value: BigInt) {
+    this.set("stakedAmount", Value.fromBigInt(value));
   }
 }

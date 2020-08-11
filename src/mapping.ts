@@ -18,10 +18,11 @@ import { handleVote } from './handleVote'
 import { handleProposalFinished } from './handleProposalFinished'
 import { handleRegisterVoter } from './handleRegisterVoter'
 import { handleRevokeVoter } from './handleRevokeVoter'
+import { handleStaked } from './handleStaked' 
 
 export {
   handleNewProposal, handleCreateProposal, handleRevokeVoter,
-  handleRegisterVoter,
+  handleRegisterVoter, handleStaked,
   handleVote, handleProposalFinished
 }
 
@@ -31,6 +32,5 @@ export function handleRewardAdded(event: RewardAdded): void { }
 
 export function handleRewardPaid(event: RewardPaid): void { }
 
-export function handleStaked(event: Staked): void { }
 
 export function handleWithdrawn(event: Withdrawn): void { }

@@ -13,6 +13,8 @@ export function getHistory(): History {
         history.allProposals = []
         history.totalVoterCount = BigInt.fromI32(0)
         history.totalVotes = BigInt.fromI32(0)
+        history.totalStakers = BigInt.fromI32(0)
+        history.totalStakedAmount = BigInt.fromI32(0)
     }
 
     return history as History
@@ -77,6 +79,8 @@ export function getVoter(voterId: string): Voter {
         voter.proposalsParticipatedCount = BigInt.fromI32(0)
         voter.voteCount = BigInt.fromI32(0)
         voter.voterRegistered = false
+        voter.staking = false
+        voter.stakedAmount = BigInt.fromI32(0)
     }
 
     return voter as Voter

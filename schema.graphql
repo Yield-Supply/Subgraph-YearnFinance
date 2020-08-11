@@ -8,6 +8,10 @@ type History @entity {
   totalVoterCount: BigInt!
   "Total Votes"
   totalVotes: BigInt!
+  "Total number of voters Staked"
+  totalStakers: BigInt!
+  "Total Amount Staked"
+  totalStakedAmount: BigInt!
 }
 
 type Proposal @entity {
@@ -99,4 +103,8 @@ type Voter @entity {
   voteCount: BigInt!
   "Is Voter Registered"
   voterRegistered: Boolean!
+  "Is Staked?"
+  staking: Boolean!
+  "Staked Amount"
+  stakedAmount: BigInt!
 }
