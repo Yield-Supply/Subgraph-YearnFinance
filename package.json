@@ -1,8 +1,8 @@
 {
   "name": "yearngovernance",
   "license": "MIT",
-  "author": "Dennison Bertram"
-  "email": "Dennison@dennisonbertram.com"
+  "author": "Dennison Bertram",
+  "email": "Dennison@dennisonbertram.com",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
